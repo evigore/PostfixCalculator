@@ -7,7 +7,7 @@ int main(int argc, char **argv)
 
 	char buffer[BUFFER_SIZE] = {0};
 
-	printf("Enter expression: ");
+	//printf("Enter postfix expression: ");
 
 	int hasEOF = 0;
 	while (!hasEOF) {
@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 	}
 
 	if (stack_size(&stack) == 1)
-		printf("Result: %g\n", stack_pop(&stack));
+		printf("%g\n", stack_pop(&stack));
 	else
 		error();
 

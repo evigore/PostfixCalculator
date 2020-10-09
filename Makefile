@@ -1,4 +1,4 @@
-P=main
+P=postfixCalc
 OBJECTS=*.c
 CFLAGS=-Wall -o $(P)
 CC=gcc
