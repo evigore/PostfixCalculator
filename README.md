@@ -35,7 +35,7 @@
 - There is no unary minus, use subtraction from zero instead
 - Floating-point numbers can be written both with a point and a comma
 - New-line symbol interpreted as the end of expression
-- Supports `pi` and 'e' numbers
+- Supports `pi` and `e` numbers
 - There can be a different amount of whitespace characters between numbers and operators (space or tabulation)
 - You can enter variables, but they can't be used in operations.
 
