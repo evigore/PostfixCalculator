@@ -38,4 +38,4 @@
 - Между числами и операторами может быть разное количество пробельных символов (пробел или табуляция)
 - Разрешается вводить переменные, но при использовании в операциях выдаст ошибку
 
-Может работать в связке с [infix2postfix](https://github.com/evgenyPro/Infix2postfix), например, `echo "2 * (3 + 2)^2 | ./infix2postfix | ./postfixCalc`.
+Может работать в связке с [infix2postfix](https://github.com/evgenyPro/Infix2postfix), например, `echo "2 * (3 + 2)^2" | ./infix2postfix | ./postfixCalc`.
