@@ -1,41 +1,42 @@
 # Postfix-calculator
-## Обрабатывает такие операции как:
-- Сложение `+`
-- Вычитание `-`
-- Умножение `*`
-- Деление `/`
-- Остаток от деления `%`
-- Возведение в степень `^`
-- Вызов функции `()`
+## Supported operators:
+- Addition `+`
+- Subtraction `-`
+- Multiplication `*`
+- Division `/`
+- Modulo division `%`
+- Exponentiation `^`
+- Function call `()`
 
-## Поддерживает такие математические функции как:
-| Название                   | Назначение                      |
+## Supported math functions:
+| Function name              | Operation                       |
 | -------------------------- | ------------------------------- |
-| <b>Корни</b>               |                                 |
-| `sqrt`                     | Квадратный корень               |
-| `cbrt`                     | Кубический корень               |
-| <b>Тригонометрические функции</b> |                          |
-| `cos`                      | Косинус                         |
-| `sin`                      | Синус                           |
-| `tg/tan`                   | Тангенс                         |
-| `arccos/acos`              | Арккосинус                      |
-| `arcsin/asin`              | Арксинус                        |
-| `arctg/atan`               | Арктангенс                      |
-| <b>Логарифмы</b>           |                                 |
-| `ln`                       | Натуральный логарифм            |
-| `log2`                     | Логарифм по основанию 2         |
-| `log10`                    | Логарифм по основанию 10        |
-| <b>Разное</b>              |                                 |
-| `abs`                      | Модуль числа                    |
-| `ceil`                     | Округление вверх                |
-| `floor`                    | Округление вниз                 |
-| `round`                    | Округление до ближайщего целого |
+| <b>Roots</b>               |                                 |
+| `sqrt`                     | Square root                     |
+| `cbrt`                     | Cube root                       |
+| <b>Trigonometric functions</b> |                             |
+| `cos`                      | Cosine                          |
+| `sin`                      | Sine                            |
+| `tg/tan`                   | Tangent                         |
+| `arccos/acos`              | Arccosine                       |
+| `arcsin/asin`              | Arcsine                         |
+| `arctg/atan`               | Arctangent                      |
+| <b>Logarithms</b>          |                                 |
+| `ln`                       | Natural logarithm               |
+| `log2`                     | Logarithm base 2                |
+| `log10`                    | Logarithm base 10               |
+| <b>Other</b>               |                                 |
+| `abs`                      | Absolute value                  |
+| `ceil`                     | Round to smallest integral value|
+| `floor`                    | Round to largest integral value |
+| `round`                    | Round to integral value         |
 
-## Правила оформления:
-- Унарный минус отсутствует, вместо него использовать вычитание из нуля
-- Не целые числа могут записываться как через точку, так и через запятую
-- Символ новой строки считает за конец выражения
-- Между числами и операторами может быть разное количество пробельных символов (пробел или табуляция)
-- Разрешается вводить переменные, но при использовании в операциях выдаст ошибку
+## Syntax rules:
+- There is no unary minus, use subtraction from zero instead
+- Floating-point numbers can be written both with a point and a comma
+- New-line symbol interpreted as the end of expression
+- Supports `pi` and 'e' numbers
+- There can be a different amount of whitespace characters between numbers and operators (space or tabulation)
+- You can enter variables, but they can't be used in operations.
 
-Может работать в связке с [infix2postfix](https://github.com/evgenyPro/Infix2postfix), например, `echo "2 * (3 + 2)^2" | ./infix2postfix | ./postfixCalc`.
+Works with [infix2postfix](https://github.com/evgenyPro/Infix2postfix). Example: `echo "2 * (3 + 2)^2" | ./infix2postfix | ./postfixCalc`.
