@@ -36,7 +36,7 @@
 - Floating-point numbers can be written both with a point and a comma
 - New-line symbol interpreted as the end of expression
 - Supports `pi` and `e` numbers
-- There can be a different amount of whitespace characters between numbers and operators (space or tabulation)
+- There can be a different amount of whitespace characters between numbers and operators (`'\ '` or `'\t'`)
 - You can enter variables, but they can't be used in operations.
 
 Works with [infix2postfix](https://github.com/evgenyPro/Infix2postfix). Example: `echo "2 * (3 + 2)^2" | ./infix2postfix | ./postfixCalc`.
