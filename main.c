@@ -110,6 +110,7 @@ int main(int argc, char **argv)
 		case TOKEN_TYPE_MINUS:
 		case TOKEN_TYPE_MUL:
 		case TOKEN_TYPE_DIV:
+		case TOKEN_TYPE_MOD:
 		case TOKEN_TYPE_POWER:
 			bValue = stackTop_to_value(&stack);
 			stack_popValue(&stack);
@@ -122,6 +123,7 @@ int main(int argc, char **argv)
 			case TOKEN_TYPE_MINUS: stack_pushValue(&stack, aValue-bValue); break;
 			case TOKEN_TYPE_MUL:   stack_pushValue(&stack, aValue*bValue); break;
 			case TOKEN_TYPE_DIV:   stack_pushValue(&stack, aValue/bValue); break;
+			case TOKEN_TYPE_MOD: stack_pushValue(&stack, fmod(aValue, bValue)); break;
 			case TOKEN_TYPE_POWER: stack_pushValue(&stack, powf(aValue, bValue)); break;
 			}
 

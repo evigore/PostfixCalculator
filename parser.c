@@ -21,6 +21,9 @@ void get_next_token(Token *token)
 		case '*':
 			token_init(token, TOKEN_TYPE_MUL, NULL, pos);
 			break;
+		case '%':
+			token_init(token, TOKEN_TYPE_MOD, NULL, pos);
+			break;
 		case '^':
 			token_init(token, TOKEN_TYPE_POWER, NULL, pos);
 			break;
@@ -82,7 +85,7 @@ static void parseNum(Token *token)
 		lexem[++i] = get_next_char();
 	} while (isdigit(lexem[i]) && i < LEXEM_LENGTH-1);
 
-	if (lexem[i] == '.') {
+	if (lexem[i] == '.' || lexem[i] == ',') {
 		lexem[++i] = get_next_char();
 		if (!isdigit(lexem[i]))
 			lex_error("Bad number", lexem[i]);
