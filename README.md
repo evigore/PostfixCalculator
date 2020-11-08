@@ -39,4 +39,4 @@
 - There can be a different amount of whitespace characters between numbers and operators (`'\ '` or `'\t'`)
 - You can enter variables, but they can't be used in operations.
 
-Works with [infix2postfix](https://github.com/evgenyPro/Infix2postfix). Example: `echo "2 * (3 + 2)^2" | ./infix2postfix | ./postfixCalc`.
+Works with [infix2postfix](https://github.com/evgeny-net-x/Infix2postfix). Example: `echo "2 * (3 + 2)^2" | ./infix2postfix | ./postfixCalc`.
