@@ -1,7 +1,15 @@
 P=postfixCalc
-OBJECTS=*.c
-CFLAGS=-Wall -o $(P)
+SRC=$(shell find . -type f -name "*.c")
+HDR=$(shell find . -type f -name "*.h")
+OBJ=$(SRC:.c=.o)
+CFLAGS=-c -g -O3 -Wall -Wno-unused-function
 CC=gcc
 
-$(P): $(OBJECTS)
-	$(CC) $(OBJECTS) $(CFLAGS)
+$(echo SRC)
+all: $(SRC) $(P)
+.c.o:
+	$(CC) $(CFLAGS) $< -o $@
+$(P): $(OBJ)
+	$(CC) $(OBJ) -o $(P)
+clear:
+	rm *.o
