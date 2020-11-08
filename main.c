@@ -143,7 +143,7 @@ int main(int argc, char **argv)
 	}
 
 	if (stack_size(&stack) != 1)
-		syntax_error("There is no enough operators after operand", stack_topToken(&stack));
+		syntax_error("There is no enough operators after operand", &token);
 
 	if (stack_topHasValue(&stack))
 		printf("%g\n", stack_popValue(&stack));
