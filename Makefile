@@ -10,6 +10,6 @@ all: $(SRC) $(P)
 .c.o:
 	$(CC) $(CFLAGS) $< -o $@
 $(P): $(OBJ)
-	$(CC) $(OBJ) -o $(P)
+	$(CC) $(OBJ) -lm -o $(P)
 clear:
 	rm *.o

@@ -1,3 +1,5 @@
+#include <math.h>
+
 #include "stack.h"
 #include "token.h"
 #include "parser.h"
